@@ -2,7 +2,7 @@
 
 | Type  | Haskell  | TypeScript  | Flow | JsDoc | JSON Schema  |
 |---|---|---|---|---|---|
-| Enum  |  `data Shape = Circle | Triangle` | `type Shape = CircleInterface | TriangleInterface`  |  `var Shape: CircleVar | TriangleVar` | `({x: number, y: number, r: number}|{{x: number, y: number, a: number, b: number, c: number}})` |`anyOf: [{ type: "object"}, { type: "object"}]` |
+| Enum  |  `data Shape = Circle \| Triangle` | `type Shape = CircleInterface \| TriangleInterface`  |  `var Shape: CircleVar \| TriangleVar` | `({x: number, y: number, r: number}|{{x: number, y: number, a: number, b: number, c: number}})` |`anyOf: [{ type: "object"}, { type: "object"}]` |
 | Nullable | Maybe type | `type T1 = (x?: number)` | `var Salary = ?number` | `{?number}` | Depends on parser, either `type: null` if it supports undefined as well or using `required` |
 | Non-nulalble | - | `let s = e!.name` | ? | `{!{number}}`  | - | `required: ['field']` |
 |Product|`Data Circle = Int Int Int`| `interface Circle {x: number; y: number; radius: number` }| `var Circle = {x: number, y: number, radius: number}` | `{{x: number; y: number; radius: number}}` | `type: "object", properties: {x: "number", y: "number", radius: "number"}` |
